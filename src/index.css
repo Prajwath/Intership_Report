@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 py-16;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-impactsure-darkblue;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-gray-600 mb-12 max-w-3xl;
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 text-gray-700 hover:text-impactsure-blue transition-colors duration-300;
+  }
+  
+  .nav-link.active {
+    @apply text-impactsure-blue font-medium;
+  }
+  
+  .timeline-line {
+    @apply absolute left-[15px] md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-impactsure-blue bg-opacity-20;
+  }
+}
+
+/* Gradient scrollbar for webkit browsers */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #2563eb 0%, #f59e42 100%);
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6 0%, #f59e42 100%);
+  border-radius: 6px;
+  border: 2px solid #fff;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb 0%, #f59e42 100%);
+}
+
+/* Gradient border for every div with class p-6 */
+div.p-6 {
+  position: relative;
+  z-index: 1;
+  background: white; /* Or your desired background */
+  border-radius: 1rem; /* Optional: for rounded corners */
+  overflow: hidden;
+}
+
+div.p-6::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* Border thickness */
+  border-radius: 1rem; /* Match the div's border-radius */
+  background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
