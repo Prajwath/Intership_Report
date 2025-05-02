@@ -1,5 +1,6 @@
 
 import React from 'react';
+import visionModelImg from '../images/vision_model.jpg';
 
 const Hero = () => {
   const scrollToRoadmap = () => {
@@ -66,8 +67,8 @@ const Hero = () => {
               <div className="absolute -z-10 inset-0 bg-gradient-to-tr from-impactsure-blue to-impactsure-accent opacity-10 blur-2xl rounded-full transform scale-150"></div>
               <div className="p-1 rounded-xl bg-gradient-to-br from-purple-400 via-pink-400 to-blue-400">
                 <img
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&amp;fit=crop&amp;q=80&amp;w=600&amp;h=400"
-                  alt="Coding at laptop"
+                  src={visionModelImg}
+                  alt="Vision Multimodal Model"
                   className="rounded-lg shadow-xl w-full object-cover bg-white"
                 />
               </div>

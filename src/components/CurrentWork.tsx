@@ -14,7 +14,7 @@ const CurrentWork = () => {
           <div className="relative bg-white rounded-2xl m-[2px]">
             <div className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 h-3"></div>
             <div className="p-8">
-              <div className="flex flex-col md:flex-row gap-8">
+              <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-4 md:gap-8 mt-4">
                 <div className="md:w-1/3 flex justify-center md:justify-start">
                   <div className="relative w-48 h-48 bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center">
                     <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-400 via-pink-400 to-indigo-400"></div>

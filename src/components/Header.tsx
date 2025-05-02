@@ -75,12 +75,12 @@ const Header = () => {
             </button>
           ))}
           <a 
-            href="https://www.linkedin.com/" 
+            href="http://localhost:8501/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="ml-4 px-4 py-2 bg-impactsure-blue hover:bg-impactsure-darkblue text-white rounded-md transition-colors duration-300"
           >
-            Connect
+            AI Agent Demo
           </a>
         </nav>
         
